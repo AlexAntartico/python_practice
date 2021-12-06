@@ -5,5 +5,5 @@ name = "Alex"
 name = "Eduardo"
 print(name)
 
-input = "5"
+input = "a5"
 print("There are " + input + "hours")
