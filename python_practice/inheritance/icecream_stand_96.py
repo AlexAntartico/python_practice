@@ -35,8 +35,8 @@ class IceCreamStand(Restaurant):
     """
     def __init__(self, restaurant_name, cuisine_type):
         super().__init__(restaurant_name, cuisine_type)
-        self.flavours_list = ["vanilla", "Chocolate", "Dark Chocolate", \
-            "pineapple", "strawberry", "red berries"]
+        self.flavours_list = ["vanilla", "Chocolate", "Dark Chocolate", 
+        "pineapple", "strawberry", "red berries"]
 
     def display_flavours(self):
         print("The below is a list of our current available flavours:")
