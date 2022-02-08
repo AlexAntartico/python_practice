@@ -3,7 +3,11 @@ import random
 
 
 class User:
-
+    """
+    Class to define a standar user with some attributes such as
+    first name, last name, location, last access, a random acc number and
+    a counter for login attempts
+    """
     def __init__(self, first_name, last_name, location) -> str:
         self.first_name = first_name.title()
         self.last_name = last_name.title()
@@ -22,7 +26,7 @@ class User:
         )
 
     def greet_user(self):
-        print(f"Hello {self.first_name}, glad you are here with ust today!!!")
+        print(f"Hello {self.first_name}, glad you are here with us today!!!")
 
     def increment_login_attempts(self):
         self.login_attempts += 1
@@ -38,19 +42,20 @@ class Admin(User):
     """
     def __init__(self, first_name, last_name, location) -> str:
         super().__init__(first_name, last_name, location)
-        self.admin_privileges = Privileges.show_privileges(self)
 
-
-
-class Privileges:
-    def __init__(self):
+class Privilege(Admin):
+    """
+    Class define privileges
+    """
+    def __init__(self, first_name, last_name, location) -> str:
+        super().__init__(self, first_name, last_name, location)
         self.privileges = ["can add post", "can delete post", "can ban user",  
         "can block ip"]
 
     def show_privileges(self):
         print("Admin priveleges:\n")
-        for self.restricted_action in self.privileges:
-            print(self.restricted_action)
+        for self.action in self.privileges:
+            print(self.action)
 
 
 alex = User("alex", "garcia", "Guadalajara, Mexico")
@@ -67,5 +72,7 @@ alex.reset_login_attempts()
 print(f"\nlogin attempts: {alex.login_attempts}")
 
 
-admin = Admin("kone", "garcia", "Zapopan")
-admin.admin_privileges()
+eduardo = Privilege("kone", "garcia", "Zapopan")
+print("\n")
+
+
