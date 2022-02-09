@@ -39,12 +39,24 @@ def run():
     # process results
     print(response_dict.keys())
 
+    # printing total_count which represents total number of GH repos
     print(f"Total repositories: {response_dict['total_count']}")
 
     # Explore information about the repositories
+    # store dictionary list into repo_dicts
     repo_dicts = response_dict['items']
+    # print lenght of dict list to know # of repos returned
     print(f"Repositories returned: {len(repo_dicts)}")
 
+    # explore the first repository
+    # to take a closer look at information returned about each repository, we
+    # pull out the first item from repo_dicts and store it in repo_dict
+    repo_dict = repo_dicts[0]
+    # we then print the # of keys in the dict to see how much info we have
+    print(f"\nKeys: {len(repo_dict)}\n")
+    # print all dictionary keys to see what kind of info we have.
+    for key in sorted(repo_dict):
+        print(key)
 
 if __name__ == '__main__':
     run()
