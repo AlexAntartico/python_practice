@@ -58,5 +58,12 @@ def run():
     for key in sorted(repo_dict):
         print(key)
 
+    print("\nSelected information about first repository:\n")
+    print(f"Name: {repo_dict['name']}")
+    print(f"Owner: {repo_dict['owner']['login']}")
+    print(f"Stargazers: {repo_dict['stargazers_count']}")
+    print(f"Respository: {repo_dict['html_url']}")
+
+
 if __name__ == '__main__':
     run()
