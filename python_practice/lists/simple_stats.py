@@ -16,4 +16,16 @@ print(f"This is the min number of the list: {sum(simple_list)}\n")
 # end parameter to any specific argument you need.
 print("List numbers are:\n")
 for j in simple_list:
-    print(f"{j} ", end=", ")
+    print(f"{j} ", end=" ")
+
+# Note this will  add a space af ter each result, this is good to visually 
+# present things to human peple, bad to use a mathematical formula because your
+# list will not end with a number but with a space or any other random  thigng 
+# you decide to use, so be mindful when changing sep= or end= parameters and
+# what will diferent arguments passed will do.  
+
+
+print("\nUsing List comprehensions:\n")
+squares = [value ** 2 for value in range(1, 11)]
+print(squares)
+
